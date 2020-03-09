@@ -9,6 +9,15 @@ tags:
 last_modified_at: 2020-03-09T09:06:00-05:00
 ---
 
+```{r}
+dim(iris)
+```
+
+```{r echo=FALSE}
+x <- 1
+x
+```
+
 마크다운 테스트
 
 이 글의 제목은 {{ page.title }}이고
