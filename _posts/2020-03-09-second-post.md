@@ -9,11 +9,11 @@ tags:
 last_modified_at: 2020-03-09T09:06:00-05:00
 ---
 
-```{r}
+```{r echo=TRUE}
 dim(iris)
 ```
 
-```{r echo=FALSE}
+```{r echo=TRUE}
 x <- 1
 x
 ```
