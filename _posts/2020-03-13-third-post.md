@@ -8,7 +8,6 @@ categories:
 tags:
   - Blog
 last_modified_at: 2020-05-05T09:06:00-05:00
----
 
 output:
   html_document:
