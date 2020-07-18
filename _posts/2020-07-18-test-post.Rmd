@@ -1,13 +1,13 @@
 ---
-title: "Air quality 2019:Things you should know about Seoul, Republic of Korea"
+title:"Air quality 2019:Things you should know about Seoul, Republic of Korea"
 author: "YJunKim"
 date: '2020 7 18 '
-output: html_document
+excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
 categories:
   - Blog
 tags:
   - Blog
-last_modified_at: 2020-07-18T09:06:00-05:00
+last_modified_at: 2020-05-05T09:06:00-05:00
 ---
 
 ```{r setup, include=FALSE}
