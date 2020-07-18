@@ -1,0 +1,47 @@
+---
+title: "Air quality 2019:Things you should know about Seoul, Republic of Korea"
+author: "YJunKim"
+date: '2020 7 18 '
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(pacman)
+library(raster)
+p_load(flexdashboard, leaflet, rmapshaper, ggplot2, dplyr, tidyr)
+setwd("D:/RWORK/BLOG/")
+```
+
+## Introduction
+블로그 테스트1. 2019년 서울시의 대기질의 살펴보기 위하여 25개 도시 대기측정소 자료를 사용하였다. 대기질을 평가하기 위하여 25개 도시대기측정소를 사용하였다.
+This article describes the assessment of air quality around Seoul(Republic of Korea) for the period 2019 based on the data from 25 realtime air quality monitors(see <http://cleanair.seoul.go.kr>. For the assessment, I will be using the PM2.5 (particulate matter of size 2.5 microns or below measured in ug/m3) measurements done by 25 monitors at various locations around Seoul.
+
+
+```{r cars, echo=FALSE}
+stn <- read.csv('station_info_201909.csv')
+stn$flag
+#pal <- colorFactor("YlOrRd", stn$pm2.5)
+leaflet(stn) %>%
+  setView(lng=126.9784, lat=37.566, zoom=10) %>%
+  addProviderTiles('CartoDB.Positron') %>%
+  #addProviderTiles('Stamen.Toner') %>%
+  addCircles(data = stn %>% filter(flag == "도시대기"),
+              lng=~lon, lat=~lat, popup=~name, group ="도시대기",
+              color = "darkred") %>%
+  addCircles(data = stn %>% filter(flag == "도로변"),
+              lng=~lon, lat=~lat, popup=~name, group ="도로변",
+              color = "darkblue") %>%
+  addLayersControl(overlayGroups = c("도시대기","도로변"),
+                   options = layersControlOptions(collapsed = FALSE))
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
