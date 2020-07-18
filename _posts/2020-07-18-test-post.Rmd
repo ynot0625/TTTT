@@ -1,13 +1,12 @@
 ---
-title:"Air quality 2019:Things you should know about Seoul, Republic of Korea"
+title:  "Air quality 2019-Things you should know about Seoul, Republic of Korea"
+excerpt: " 했다."
 author: "YJunKim"
-date: '2020 7 18 '
-excerpt: "했다."
 categories:
   - Blog
 tags:
   - Blog
-last_modified_at: 2020-05-05T09:06:00-05:00
+last_modified_at: 2019-07-18T08:06:00-05:00
 ---
 
 ```{r setup, include=FALSE}
